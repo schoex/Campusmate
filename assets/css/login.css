@@ -1,0 +1,96 @@
+.header{
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  text-align: center;
+  color: #fff;
+  background-image: url("../img/home.png");
+  background-position: center center;
+  background-size: cover;
+  height: 500px;
+}
+body{
+  background: none;overflow-x: hidden;}
+  @media(min-width:1150px) {
+.container-fluid{
+    width: 1170px;
+}
+.container-fluid-960 {
+    width: 960px;
+}
+}
+.header a.logo{color: #fff;}
+.logo-icon{
+  display: inline;
+  padding-left: 73px;
+  padding-bottom: 77px;
+  background-image: url("../img/cm_toon.png");
+  background-repeat: no-repeat;}
+.campusmate{line-height: 2px;
+position: relative;
+top: 18px;
+font-size: 25px;
+font-weight: bold;}
+.contactus{color: #fff;border: 1px solid #fff;margin-top: 30px;}
+.loginbox{height: 139px;
+color: #FFF;
+font-weight: bold;
+text-shadow: 1px 1px 1px #666;
+padding-top: 115px;}
+.errorbox{
+padding-top: 95px;
+}
+.loginbox div:first-child span:first-child{font-size: 40px;}
+.studentlogin{background-color: #3378F4;}
+.orangecolor{background-color: #FFA83C;}
+.loginboxcontainer{z-index: 1000;
+margin-top: -150px;
+position: relative;
+margin-bottom: 15px;}
+.greencolor{background-color:#00B25B;}
+.service-box{margin: 10px;
+height: 279px;}
+.studentpic,.teacherpic,.adminpic{background-image: url("../img/student.png");
+height: 202px;
+background-repeat: no-repeat;
+margin: 0px auto;
+width: 213px;
+}
+.teacherpic{background-image: url("../img/teacher.jpg");}
+.adminpic{background-image: url("../img/admin.jpg");}
+.btn-student,.btn-student:hover,.btn-teacher,.btn-teacher:hover,.btn-admin,.btn-admin:hover{background-color: #1E4F9A;font-weight: bold;border: none;color: #fff;text-shadow: none;border-radius: 1px;padding: 10px 20px;font-family: "sinkin_sans400_regular" ;border-bottom:3px solid #163F77;}
+.btn-student:hover,.btn-admin:hover,.btn-teacher:hover{opacity: 0.9;}
+.btn-admin,.btn-admin:hover{background-color: #008144;border-bottom-color: #005831;}
+.btn-teacher,.btn-teacher:hover{background-color: #AB7027;border-bottom-color: #7E541D;}
+.footer{background-color: #363636;min-height: 100px;}
+.footer .logobot{background-image: url("../img/campusmate.png");
+padding-left: 220px;
+background-repeat: no-repeat;
+padding-bottom: 21px;
+padding-top: -18px;
+display: inline-block;
+height: 50px;
+width: 216px;
+margin-top: 23px;text-transform: uppercase;}
+ul.foooterlist{color: #fff;text-align: left;list-style-type: none;padding-top: 19px;text-transform: uppercase;text-align: center;}
+ul.foooterlist a,.follow{color: #fff;text-transform: uppercase;padding-top: 24px;font-size: 12px;}
+.follow i{margin: 10px 10px;}
+.loginform{display: none;margin: -15px 0px;}
+.loginform button,.loginform input,.loginform a,.loginform p{display: block;margin: 0px auto;}
+.loginform a,.loginform p{color: #fff;font-weight: bold;padding: 5px;}
+.loginform a{font-size: 11px;text-align: right;;padding: 5px;font-weight: normal;}
+.loginform a{ color: #163F77;}
+.loginform .btn{font-size: 11px;}
+.orangecolor .loginform a{ color: #7E541D;}
+.greencolor .loginform a{ color: #005831;}
+
+.loginform input{    margin-top: 5px;
+}
+.loginform .btn-reset{margin-top: 5px;}
+.loginform input.email-enter ,.loginform .btn-reset{display: none;}
+.forget-username{cursor: pointer;}
+@media(min-width:990px) {
+ul.foooterlist{
+  text-align: left;
+}
+}

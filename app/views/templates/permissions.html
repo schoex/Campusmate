@@ -1,0 +1,127 @@
+<section class="content-header">
+    <h1>
+       Permissions
+    </h1>
+</section>
+
+
+<section class="content" ng-show="views.list">
+   <div class="box col-xs-12">
+   
+      <div class="box-body table-responsive">
+	   <table class="table permission table-hover">
+	    <tbody><tr>
+		<th >Feauture</th>
+		<th ng-repeat="usrole in newroles" >{{ usrole.role }}</th>
+
+		</tr>
+		 <tr>
+                     
+					 <td class="v-align-middle">
+                      ASS
+                      </td>
+					   <td class="v-align-middle" ng-repeat="assignmentpermission in assignpermissions">
+ <a class="permission_class" ng-click="editpermission(1,assignmentpermission.permission,assignmentpermission.roleId)" >
+ <span ng-if="assignmentpermission.permission == 0">
+  <i class="fa fa-eye view"></i>  </span>
+  <span ng-if="assignmentpermission.permission == 1">
+   <i class="fa fa-eye view"></i> <i class="fa fa-pencil edit"></i></span></a>
+ <!--  <a type="button" ng-click="editpermission(1,attdpermission.permission,attdpermission.roleId)" class="btn btn-danger btn-flat">edit</a>
+        -->              </td>
+                      
+                    </tr>
+					 <tr>
+                     
+					 <td class="v-align-middle">
+                      STA
+                      </td>
+					   <td class="v-align-middle" ng-repeat="attdpermission in attendacepermissions">
+ <a class="permission_class" ng-click="editpermission(2,attdpermission.permission,attdpermission.roleId)" >
+ <span ng-if="attdpermission.permission == 0">
+  <i class="fa fa-eye view"></i>  </span>
+  <span ng-if="attdpermission.permission == 1">
+   <i class="fa fa-eye view"></i> <i class="fa fa-pencil edit"></i></span></a>
+ <!--  <a type="button" ng-click="editpermission(1,attdpermission.permission,attdpermission.roleId)" class="btn btn-danger btn-flat">edit</a>
+        -->              </td>
+                      
+                    </tr>
+					 <tr>
+                     
+					 <td class="v-align-middle">
+                      GB
+                      </td>
+					   <td class="v-align-middle" ng-repeat="gradebook in gradebooks">
+ <a class="permission_class" ng-click="editpermission(3,gradebook.permission,gradebook.roleId)" >
+ <span ng-if="gradebook.permission == 0">
+  <i class="fa fa-eye view"></i>  </span>
+  <span ng-if="gradebook.permission == 1">
+   <i class="fa fa-eye view"></i> <i class="fa fa-pencil edit"></i></span></a>
+ <!--  <a type="button" ng-click="editpermission(1,attdpermission.permission,attdpermission.roleId)" class="btn btn-danger btn-flat">edit</a>
+        -->              </td>
+                      
+                    </tr>	
+						 <tr>
+                     
+					 <td class="v-align-middle">
+                      SA
+                      </td>
+					   <td class="v-align-middle" ng-repeat="staffattendance in staffattendances">
+ <a class="permission_class" ng-click="editpermission(3,staffattendance.permission,staffattendance.roleId)" >
+ <span ng-if="staffattendance.permission == 0">
+  <i class="fa fa-eye view"></i>  </span>
+  <span ng-if="staffattendance.permission == 1">
+   <i class="fa fa-eye view"></i> <i class="fa fa-pencil edit"></i></span></a>
+ <!--  <a type="button" ng-click="editpermission(1,attdpermission.permission,attdpermission.roleId)" class="btn btn-danger btn-flat">edit</a>
+        -->              </td>
+                      
+                    </tr>
+					
+	   </table>
+	  
+        
+       <!--   <table class="table table-hover">
+              <tbody><tr>
+                  <th>{{phrase.ID}}</th>
+                  <th>{{phrase.InventoryName}}</th>
+                  <th>{{phrase.InventoryQty}}</th>
+				  <th>Faculty</th>
+                  <th>{{phrase.InventoryTotal}}</th>
+				  <th>{{phrase.InventoryStatus}}</th>
+                  <th>{{phrase.Operations}}</th>
+              </tr>
+              <tr dir-paginate="inventorry in inventory | filter:searchText.name | filter:{status:searchText.status} | itemsPerPage:20" total-items="totalItems">
+                  <td>{{inventorry.id}}</td>
+                  <td>{{inventorry.name}}</td>
+                  <td>{{inventorry.qty}}</td>
+				    <td>{{ inventorry.teachername }}</td>
+                  <td>{{inventorry.total}}</td>
+                  <td>
+				  <span ng-if="inventorry.status == 1">Approved</span><span ng-if="inventorry.status == 0">"Rejected"</span></td>
+				  <td>
+                    <a  ng-click="edit(inventorry.id)" type="button" class="btn btn-info btn-flat" title="{{phrase.Edit}}" tooltip><i class="fa fa-pencil"></i></a>
+                    <a  ng-click="remove(inventorry,$index)" type="button" class="btn btn-danger btn-flat" title="{{phrase.Remove}}" tooltip><i class="fa fa-trash-o"></i></a>
+                  </td>
+              </tr>
+              <tr ng-show="!inventory.length"><td class="noTableData" colspan="6">{{phrase.noInventory}}</td></tr>
+          </tbody></table>
+          <dir-pagination-controls class="pull-right" on-page-change="pageChanged(newPageNumber)" template-url="templates/dirPagination.html" ></dir-pagination-controls>
+     --> </div>
+  </div>
+</section>
+
+
+<modal visible="showModal"><div ng-bind-html="modalContent"></div></modal>
+<modal visible="showModalLink">
+  <div class="row">
+      <div class="col-sm-9">
+        <select name="permission" class="form-control"  ng-model="permission">
+      <option value=0>View</option>
+      <option value=1>View and Edit</option>
+	  </select></div>
+	  
+      <div class="col-sm-2">
+        <a type="button" ng-click="editnewpermission(permission,moduleId,roleId)" class="btn btn-danger btn-flat">Update</a>
+      </div>
+  </div>
+  
+</modal>
